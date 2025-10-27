@@ -32,7 +32,7 @@
 /*
  * SUPPLEMENTAL: syscall record without syscalls
  */
-#define BM_BACKING_FILE "./syscall_record"
+#define BM_BACKING_FILE "/tmp/syscall_record"
 #define BM_SIZE (1UL << 9)
 static char *bm_mem = NULL;
 
