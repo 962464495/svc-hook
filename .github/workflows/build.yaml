@@ -84,3 +84,12 @@ jobs:
           make fmt
           make -C apps/basic fmt
           test -z "$(git status --porcelain)"
+      - name: Upload Android Build Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: android-build-artifacts-${{ matrix.SYSCALL_RECORD }}
+          path: |
+            out/
+            apps/basic/*.so
+            apps/basic/*.apk
+            # 如果有其他具体产物路径，也可以一并填写
