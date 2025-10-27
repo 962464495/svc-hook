@@ -89,7 +89,5 @@ jobs:
         with:
           name: android-build-artifacts-${{ matrix.SYSCALL_RECORD }}
           path: |
-            out/
-            apps/basic/*.so
-            apps/basic/*.apk
-            # 如果有其他具体产物路径，也可以一并填写
+            libsvchook.so
+            apps/basic/libsvchook_basic.so
